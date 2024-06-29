@@ -1,0 +1,21 @@
+{
+  "name": "zero-testnet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^7.1.1",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.1",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.3.1"
+  },
+  "description": ""
+}
