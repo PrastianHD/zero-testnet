@@ -4,7 +4,8 @@ require('dotenv').config();
 // Import fungsi-fungsi dari folder src
 const depositFunction = require('./src/deposit');
 const withdrawFunction = require('./src/withdraw');
-const transferFunction = require('./src/transfer');
+const transferethFunction = require('./src/transfereth');
+const transferdocsFunction = require('./src/transferdocs');
 
 // Fungsi untuk menampilkan menu
 async function showMenu() {
@@ -13,11 +14,12 @@ async function showMenu() {
 
     // console.log(chalk.default.blue(figlet.default.textSync('NodeInter', { horizontalLayout: 'full' })));
     console.log(chalk.default.blue(figlet.default.textSync('Zero Testnet', { horizontalLayout: 'full' })));
-    console.log(chalk.default.green("=== Menu ==="));
-    console.log(chalk.default.yellow("1. Deposit"));
-    console.log(chalk.default.yellow("2. Withdraw"));
-    console.log(chalk.default.yellow("3. Transfer"));
-    console.log(chalk.default.yellow("4. Keluar"));
+    console.log(chalk.default.green("====== Menu ======"));
+    console.log(chalk.default.yellow("1. Deposit: Bridge from Sepolia to Zero Testnet"));
+    console.log(chalk.default.yellow("2. Withdraw: Bridge from Zero Testnet to Sepolia"));
+    console.log(chalk.default.yellow("3. Transfer ETH to Random Address"));
+    console.log(chalk.default.yellow("4. Transfer DOCS to Random Address"));
+    console.log(chalk.default.yellow("5. Keluar"));
 }
 
 // Fungsi utama
@@ -25,7 +27,7 @@ async function main() {
     let choice = 0;
 
     // Loop untuk menampilkan menu dan memproses pilihan
-    while (choice !== 4) {
+    while (choice !== 5) {
         await showMenu();
 
         // Mendapatkan pilihan dari pengguna
@@ -41,9 +43,12 @@ async function main() {
                 await withdrawFunction(); // Memanggil fungsi withdraw
                 break;
             case 3:
-                await transferFunction(); // Memanggil fungsi transfer
+                await transferethFunction(); // Memanggil fungsi transfer
                 break;
             case 4:
+                await transferdocsFunction(); // Memanggil fungsi transfer
+                break;
+            case 5:
                 console.log(chalk.default.red("Keluar dari menu."));
                 break;
             default:

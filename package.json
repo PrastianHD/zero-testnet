@@ -1,9 +1,10 @@
 {
   "name": "zero-testnet",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +15,8 @@
     "cli-table3": "^0.6.5",
     "dotenv": "^16.4.5",
     "ethers": "^6.13.1",
-    "figlet": "^1.7.0",
-    "inquirer": "^9.3.1"
+    "figlet": "^1.7.0"
   },
+  "devDependencies": {},
   "description": ""
 }

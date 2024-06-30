@@ -1,0 +1,15 @@
+# Ignore node modules
+/node_modules/
+
+# Ignore logs
+*.log
+
+# Ignore editor files
+.vscode/
+
+# Ignore git
+.git/
+
+# Ignore npm
+npm-debug.log
+yarn-error.log
